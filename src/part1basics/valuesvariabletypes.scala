@@ -1,10 +1,9 @@
 package part1basics
 
 object valuesvariabletypes extends App{
-  val x = 42 // val x:Int =42  compiler can infer the type
+  // val = values  are immutables
+  val x = 42
   println(x)
-// val is vlaues
- // x=2 // vals are immutable
 
   val aString : String =" hello " ;
   val anotherString =" goodbyes "
@@ -15,8 +14,6 @@ object valuesvariabletypes extends App{
   val aLong : Long = 34023578203L
   val aFloats : Float =2.0f
   val aDouble: Double= 3.14
-  
-  
   //variables
   var aVariables: Int=4
   aVariables=5 // side effects vars are mutables 

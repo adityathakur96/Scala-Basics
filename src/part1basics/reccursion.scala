@@ -15,12 +15,12 @@ object reccursion extends App{
     }
 
 println(aFactorial(10))
-   // println(aFactorial(5000))      /// it will give error of stackoverflow error
+   // println(aFactorial(5000))
 
 
 def Factorial(n:Int):BigInt = {
-  @tailrec         // if you dont know that your fuction is tail recursive then you can add this and check if it show error
-  //  if not tail recursive
+  @tailrec
+  // if you dont know that your fuction is tail recursive then you can add this and check if it show error if not tail recursive
   def factHelper(x:Int , accumulator:BigInt ) :BigInt=
   if (x<=1) accumulator
   else factHelper(x-1,x*accumulator)

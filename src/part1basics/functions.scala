@@ -22,9 +22,6 @@ object functions extends App{
   println(aRepeatedFunction("hello",3))
   // when you need loops , use recursion
   // here also we can remove the return type of fucntion as compiler itself capable of thinking
-  // what will be the return type but the reccuresive function needsd the return type and compiler complain about it
-// but always give return type
-
 
 def aFunctionWithSideAffect(aString : String ) : Unit =println(aString)
 def aBigFunction(n:Int ):Int={
@@ -63,7 +60,7 @@ def Fibonacci(n:Int):Int =
 println(Fibonacci(4))
 
 def isPrime(n:Int):Boolean ={
-  def isPrimeUntill(t:Int):Boolean =               // while using two function first one should have parenthesis
+  def isPrimeUntill(t:Int):Boolean =
     if (t<=1) true
     else n%t !=0 && isPrimeUntill(t-1)
 

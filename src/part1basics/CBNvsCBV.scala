@@ -13,19 +13,13 @@ object CBNvsCBV extends App{
   }
 
   calledByValue(System.nanoTime())
-  println("        ")  // in callbyvalue the value itself used every time that is when the functionnn istell called the same value repeated as x is replaced with 129319405916500L
-  // but when the callbyname fucntion called it replace x with System.nanoTime() and every time new value of system time generated
+  println("        ")
   calledByNume(System.nanoTime())
   println("   ")
 
 
 
   def infinite():Int= 1+infinite()
-  def printFirst (x:Int,y: => Int)=println(x)   //this will print only first one not the byname one
-
-  //printFirst(infinite(),34)
+  def printFirst (x:Int,y: => Int)=println(x)
 printFirst(34,infinite())
-
-
-
 }

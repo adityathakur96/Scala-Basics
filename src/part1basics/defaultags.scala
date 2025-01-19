@@ -1,4 +1,4 @@
-//package part1basics
+package part1basics
 
 //object defaultags extends App{
 //
