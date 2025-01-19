@@ -1,0 +1,15 @@
+. Transformation:
+Definition: Transformation in functional programming refers to the process of applying a function to a value or a collection of values to produce a new value or collection. The transformation changes the structure or type of the data while preserving its underlying meaning.
+Examples:
+map Operation: The most common example of transformation is the map function. map applies a given function to each element in a collection (like a list or an Option) and returns a new collection with the transformed elements.
+Example: If you have a list of integers [1, 2, 3] and you apply a function x => x * 2 to it using map, the result will be [2, 4, 6].
+2. Flattening:
+Definition: Flattening is the process of converting a structure of nested layers into a single layer. In functional programming, flattening is often discussed in the context of monads (like Option, List, Try, etc.) where you have nested structures, and you want to reduce the nesting.
+Examples:
+flatten Operation: If you have a list of lists, such as List(List(1, 2), List(3, 4)), applying flatten will convert it to a single list: List(1, 2, 3, 4).
+Monads: When working with monads like Option or Try, flattening happens when you have nested monads, such as Option[Option[A]], and you want to simplify it to Option[A].
+3. Combining Transformation and Flattening:
+flatMap Operation: The flatMap function combines both transformation and flattening. It first applies a transformation (like map would do) and then flattens the resulting structure.
+Example in Option:
+If you have Option[Int] and you want to transform the integer inside it into another Option[Int] (like doubling the number), map would give you Option[Option[Int]]. To avoid this extra nesting, you use flatMap, which applies the transformation and then flattens the result into a single Option.
+Example: Option(3).flatMap(x => Option(x * 2)) results in Option(6).
