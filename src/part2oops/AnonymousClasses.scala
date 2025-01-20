@@ -14,15 +14,6 @@ object AnonymousClasses extends App {
     // always make the methods for the abstract classes so that compiler make the non abstract  classes in the background
   }
 
-  /*
-  equivalent with above the compiler does tghis behind the scene
-
-   class AnonymousClasses$$anon$1 extends Animal{
-    override def eat : Unit = println("hahahahahahah")     // this actually happened in behind the scenes of compiler
-    // and that's how we are getting something output because of this
-  }
-  val Funnyanimal: Animal=new AnonymousClasses$$anon$1
-   */
   println(Funnyanimal.getClass) // getClass ANOTHER INBUILT METHOD
 
   // always make sure to pass the proper parameter to call for  the anonymous class

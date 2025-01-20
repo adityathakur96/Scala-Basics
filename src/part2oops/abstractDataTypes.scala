@@ -2,12 +2,8 @@ package part2oops
 
 object abstractDatatypes extends App {
 
-
-
-    //abstract
-    abstract class Animals { // abstract classes cant be instantiated
-      val creatureType: String ="wild"            // abstract classes can have abstract and non abstract types
-
+    abstract class Animals {
+      val creatureType: String ="wild"  // abstract classes can have abstract and non abstract types
       def eat: Unit
     }
 
@@ -20,8 +16,8 @@ object abstractDatatypes extends App {
     // traits
     // these are the ultimate abstract  datatypes in the scala
     trait carnivore {
-      def eat(animals: Animals): Unit // traits can be inherited with the another too like below
-      def prefferedMeal:String = " Fresh meat "         // trrait can also have abstract and non abstract types
+      def eat(animals: Animals): Unit
+      def prefferedMeal:String = " Fresh meat "// trrait can also have abstract and non abstract types
     }
     trait coldebloded{
 
@@ -31,16 +27,17 @@ object abstractDatatypes extends App {
      override val creatureType: String = "croc"
       val eat: Unit = println("nomnomnom")
 
-      def eat(animals: Animals): Unit = println(s"iam a croc and iam eating ${animals.creatureType}") // here animal.creatureType will return most overriden implementation
+      def eat(animals: Animals): Unit = println(s"iam a croc and iam eating ${animals.creatureType}")
+      // here animal.creatureType will return most overriden implementation
     }
 
     val dog = new Dog
     val croc = new Crocodile
     croc.eat(dog)
-
-  // traits vs abstract class
-  // 1-trait donot have the constructor parameter
-   // 2-mutiple traits may be inherited but class can be only one by the same class
-   //3- trait = behavior , abstract class = "thing"
-
+/*
+   traits vs abstract class
+   1-trait donot have the constructor parameter
+    2-mutiple traits may be inherited but class can be only one by the same class
+   3- trait = behavior , abstract class = "thing"
+*/
 }
